@@ -1,3 +1,7 @@
-[data-testid="thread-disclaimer"] {
+/* Older ChatGPT layouts expose a dedicated test id. */
+[data-testid="thread-disclaimer"],
+/* Current layouts put the copy-excluded disclaimer directly in a sticky footer.
+   Keep the layout and typography constraints to avoid hiding message content. */
+.sticky.bottom-0 > div[data-markdown-copy="exclude"].text-center.text-xs.text-codex-description {
   display: none !important;
 }
